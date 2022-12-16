@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Error</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <style>
+            h2, h3 {
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                color: Red;
+            }
+            body{
+                background: linear-gradient(to right , green, cyan, lightblue);
+            }
+        </style>
+      <h2>
+        Email already registered 
+      </h2>
+      <h3>
+        Password does'nt Match
+      </h3>
+      <li>
+        <a href="{% url 'signup' %}" class="sign-in"><i class="fa fa-user"></i> Register</a>
+    </li>
+        <script src="" async defer></script>
+    </body>
+</html>

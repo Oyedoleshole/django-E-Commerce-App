@@ -1,0 +1,29 @@
+<!-- Top header start -->
+{% load static %}
+<header class="top-header th-2 top-header-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-7">
+                <div class="list-inline">
+                    <a href="tel:+91 9554864869"><i class="fa fa-phone"></i>+91 9554864869</a>
+                    <a href="tel:sharmayashraj37@gmail.com"><i class="fa fa-envelope"></i>sharmayashraj37@gmail.com</a>
+                    <i class="fa fa-clock-o"></i>Mon - Fri: 10:00am - 7:00pm
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-5">
+                <ul class="top-social-media pull-right">
+                    <li>
+                        <a href="{% url 'login' %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'signup' %}" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Top header end -->
+{% block content %}
+{% endblock %}

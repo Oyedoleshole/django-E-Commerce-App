@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'image',
     'rest_framework_simplejwt',
     'user_login_with_otp',
-    'uses_of_slug_field'
+    'uses_of_slug_field',
+    'user_otp',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -61,7 +63,8 @@ ROOT_URLCONF = 'django_settings.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates'), os.path.join(BASE_DIR, 'user_template')],
+        'DIRS': [os.path.join(BASE_DIR,'templates'), os.path.join(BASE_DIR, 'user_template'),
+                 os.path.join(BASE_DIR, 'user_otp/Template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,6 +79,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'django_settings.wsgi.application'
 
@@ -161,6 +165,7 @@ REST_FRAMEWORK = {
 #Image Uploading file.
 
 MEDIA_URL='/media/'
+DOMAIN_URL='127.0.0.1:8000'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media/')
 
 #SMTP FOR EMAIL OTP.
